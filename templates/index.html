@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block styles %}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+{% endblock %}
+
+{% block app_content %}
+  <div class="jumbotron" style="margin-top:-30px">
+      <div class="container">
+          <center>
+          <h1 style="color:white"><b>Hello World</b></h1>
+        <h4 style="color:white">Welcome to Hello World Flask Application</h4>
+              <br>
+          </center>
+      </div>
+  </div>
+<div class="container">
+
+    <div class="card">
+        <h1><b>Hello World</b></h1>
+        <h2><b>Hello World</b></h2>
+        <h3><b>Hello World</b></h3>
+        <h4><b>Hello World</b></h4>
+        <h5><b>Hello World</b></h5>
+        <h6><b>Hello World</b></h6>
+    </div>
+</div>
+<div class="footer-2">
+  <p>Hello World Flask Application<br>
+</div>
+{% endblock %}

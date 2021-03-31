@@ -26,7 +26,7 @@ jobs:
 
         # Build App and Run Application Test
       - name: Build Application and Run unit Test
-        run: python app.py & pytest
+        run: python run.py & pytest
 
   continuous-deployment:
     runs-on: ubuntu-latest

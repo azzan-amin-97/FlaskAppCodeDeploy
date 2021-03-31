@@ -1,2 +1,6 @@
 #!/bin/bash
-authbind gunicorn -w 4 -b 0.0.0.0:80 app:app --timeout 1800
+sudo pip3 install virtualenv
+cd /home/ec2-user/app
+virtualenv environment
+source environment/bin/activate
+sudo pip3 install -r requirements.txt

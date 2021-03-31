@@ -3,7 +3,6 @@ os: linux
 files:
  - source: .
    destination: /home/ec2-user/app
-
 hooks:
   AfterInstall:
    - location: scripts/install_app_dependencies

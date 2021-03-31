@@ -1,2 +1,4 @@
 #!/bin/bash
+cd /home/ec2-user/app
+source environment/bin/activate
 authbind gunicorn -w 4 -b 0.0.0.0:80 app:app --timeout 1800 &

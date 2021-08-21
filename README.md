@@ -11,6 +11,7 @@ CI/CD Tools used in this repository:
 
 
 ![](img/cicd-flow.png)
+
 All the project codes are committed in GitHub repository. GitHub Actions will take place once user trigger a push event to the respective repository. It will perform the code build process and run the automated tests. Once it is done, GitHub Actions will run the CD job which will trigger the AWS CodeDeploy to do the deployment part. CodeDeploy will help to automate the deployment by fetching the latest committed code in GitHub and update the project code in the EC2 server.
 
 

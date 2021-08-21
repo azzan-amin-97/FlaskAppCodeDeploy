@@ -1,5 +1,13 @@
-<h1 align='center'>Amazon EC2 Deployment <span><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/AWS_Simple_Icons_Compute_Amazon_EC2_Instances.svg/1200px-AWS_Simple_Icons_Compute_Amazon_EC2_Instances.svg.png' width='5%' align='center'></span></h1> 
-<h2 align='center'>CICD Pipeline - GitHub Actions + AWS CodeDeploy</h2>
+<h1 align='center'>Amazon EC2 Deployment 
+  <span>
+  <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/AWS_Simple_Icons_Compute_Amazon_EC2_Instances.svg/1200px-AWS_Simple_Icons_Compute_Amazon_EC2_Instances.svg.png' width='5%' align='center'>
+  </span>
+</h1> 
+<h2 align='center'>CICD Pipeline - GitHub Actions 
+   <span>
+    <img src='https://avatars.githubusercontent.com/u/44036562?s=200&v=4' width='5%' align='center'>
+  </span>
+  + AWS CodeDeploy</h2>
 </center>
 CI/CD tools is important to help a team to automate their testing and deployment. Some tools are specifically handle the Continuous Integration (CI) which focusing on build, test and merge the project while some manage the development and deployment (CD) side.
 

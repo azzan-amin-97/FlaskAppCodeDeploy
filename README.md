@@ -7,7 +7,11 @@
    <span>
     <img src='https://avatars.githubusercontent.com/u/44036562?s=200&v=4' width='5%' align='center'>
   </span>
-  + AWS CodeDeploy</h2>
+  + AWS CodeDeploy
+  <span>
+  <img src='img/codedeploy.png' width='5%' align='center'>
+  </span>
+</h2>
 </center>
 CI/CD tools is important to help a team to automate their testing and deployment. Some tools are specifically handle the Continuous Integration (CI) which focusing on build, test and merge the project while some manage the development and deployment (CD) side.
 

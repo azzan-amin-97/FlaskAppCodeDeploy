@@ -1,7 +1,12 @@
 name: CI/CD Pipeline
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - main 
+
+  pull_request:
+    branches:
+      - main
 jobs:
   continuous-integration:
     runs-on: ubuntu-latest
@@ -17,16 +22,40 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+      - name: Run Flake8
+        run: flake8 > flake8_output.txt
+      
+      - name: Read Flake8 Output
+        id: read_flake8_output
+        run: echo "::set-output name=flake8_output::$(cat flake8_output.txt)"
+      
+      - name: Comment on PR with Flake8 Results
+        uses: softprops/action-gh-release@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: sa-east-1
-
+          files: flake8_output.txt
+          tag_name: flake8-results
+          body: |
+            **Flake8 Linting Results:**
+      
+            ```
+            ${{ steps.read_flake8_output.outputs.flake8_output }}
+            ```
+        
         # Build App and Run Application Test
       - name: Build Application and Run unit Test
-        run: python run.py & pytest
+        run: python run.py & pytest --junitxml=test_results.xml
+      
+      - name: Comment on PR with Pytest Results
+        uses: softprops/action-gh-release@v1
+        with:
+          files: test_results.xml
+          tag_name: pytest-results
+          body: |
+            **Pytest Test Results:**
+
+            ```
+            ${{ steps.pytest_results.outputs.test_results }}
+            ```
 
   continuous-deployment:
     runs-on: ubuntu-latest

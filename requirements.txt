@@ -1,7 +1,7 @@
 appdirs==1.4.4
 atomicwrites==1.4.0
 attrs==20.3.0
-black==23.7.0
+black==19.10b0
 certifi==2020.12.5
 chardet==4.0.0
 click==8.1.7
@@ -9,7 +9,7 @@ colorama==0.4.4
 distlib==0.3.1
 dominate==2.6.0
 filelock==3.0.12
-flake8==6.1.0
+flake8==3.9.2
 Flask==1.1.2
 Flask-Bootstrap==3.3.7.1
 gunicorn==20.1.0
